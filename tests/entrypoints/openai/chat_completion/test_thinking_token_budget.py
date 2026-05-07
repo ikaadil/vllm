@@ -70,7 +70,6 @@ def server():
         "--enforce-eager",
         "--gpu-memory-utilization",
         "0.4",
-        "--no-async-scheduling",
     ]
     with RemoteOpenAIServer(MODEL_NAME, args) as remote_server:
         yield remote_server
@@ -86,7 +85,6 @@ def server_with_auto_reasoning_config():
         "--enforce-eager",
         "--gpu-memory-utilization",
         "0.4",
-        "--no-async-scheduling",
     ]
     with RemoteOpenAIServer(MODEL_NAME, args) as remote_server:
         yield remote_server
